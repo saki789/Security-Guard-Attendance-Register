@@ -5,24 +5,36 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Security Guard Attendance Register</h1>
-    <form id="attendanceForm">
-        <label for="guardName">Security Guard's Name:</label>
-        <input type="text" id="guardName" name="guardName" required><br><br>
-        
-        <label for="timeIn">Time In:</label>
-        <input type="time" id="timeIn" name="timeIn" required><br><br>
-        
-        <label for="timeOut">Time Out:</label>
-        <input type="time" id="timeOut" name="timeOut" required><br><br>
-        
-        <label for="day">Day:</label>
-        <input type="date" id="day" name="day" required><br><br>
-        
-        <button type="button" id="generateExcel">Generate Excel</button>
-    </form>
+    <div class="container">
+        <h1>Security Guard Attendance Register</h1>
+        <form id="attendanceForm">
+            <label for="guardName">Security Guard's Name:</label>
+            <input type="text" id="guardName" name="guardName" required><br><br>
+            
+            <label for="timeIn">Time In:</label>
+            <input type="time" id="timeIn" name="timeIn" required><br><br>
+            
+            <label for="timeOut">Time Out:</label>
+            <input type="time" id="timeOut" name="timeOut" required><br><br>
+            
+            <label for="day">Day:</label>
+            <input type="date" id="day" name="day" required><br><br>
+            
+            <button type="button" id="generateExcel">Generate Excel</button>
+        </form>
+    </div>
 
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script>
+        // Load the SheetJS library
+        var script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js';
+        script.onload = function () {
+            // Event listener for the "Generate Excel" button
+            document.getElementById("generateExcel").addEventListener("click", function () {
+                // JavaScript code for generating Excel (as provided earlier)
+            });
+        };
+        document.head.appendChild(script);
+    </script>
 </body>
-          </html>
+</html>
